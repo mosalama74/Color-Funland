@@ -61,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Username',
-                              style: ts18Black700,
+                              style: ts18Purble700,
                             ),
                             SizedBox(height: 17.h),
                             const CustomTextField(
@@ -78,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             Text(
                               'Password',
-                              style: ts18Black700,
+                              style: ts18Purble700,
                             ),
                             SizedBox(height: 17.h),
                             const PasswordField(),

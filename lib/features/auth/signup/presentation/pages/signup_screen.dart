@@ -1,6 +1,6 @@
 import 'package:color_funland/core/components/elevated_btn.dart';
 import 'package:color_funland/core/utils/app_colors.dart';
-import 'package:color_funland/features/auth/login/presentation/pages/login_page.dart';
+import 'package:color_funland/features/addProfileInfo/presentation/pages/addd_profile_info.dart';
 import 'package:color_funland/features/auth/signup/presentation/widgets/sign_up_first_body.dart';
 import 'package:color_funland/features/auth/signup/presentation/widgets/sign_up_second_body.dart';
 import 'package:flutter/material.dart';
@@ -44,13 +44,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: SingleChildScrollView(
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(40),
                   ),
                   color: cWhiteColor,
                   elevation: 5,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 78, vertical: 59),
+                        horizontal: 78, vertical: 30),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +64,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                         _isFirstPage ? const SignUpFirstBody() : const SignUpSecondBody(),
                         const SizedBox(height: 20),
-
                         // Next Button
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 90),
@@ -74,7 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             _isFirstPage ?  setState(() {
                                 _isFirstPage = false;
                               }) :setState(() {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const AddProfileInfo()));
                               }); 
 
                             },

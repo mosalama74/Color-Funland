@@ -18,11 +18,3 @@ Color cHintColor = const Color(0xff9B83B7);
 
 
 
-///*************Gradient Colors *****************/
-
-Gradient signInBtnGradient = LinearGradient(
-          colors: [
-            cPinkGradient,
-            cPurbleGradient
-          ],
-        );

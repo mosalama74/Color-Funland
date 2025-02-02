@@ -32,7 +32,7 @@ class SignUpFirstBody extends StatelessWidget {
           children: [
             Text(
               'First name',
-              style: ts18Black700,
+              style: ts18Purble700,
             ),
             SizedBox(height: 17.h),
             const CustomTextField(
@@ -48,7 +48,7 @@ class SignUpFirstBody extends StatelessWidget {
           children: [
             Text(
               'Last name',
-              style: ts18Black700,
+              style: ts18Purble700,
             ),
             SizedBox(height: 17.h),
             const CustomTextField(
@@ -64,7 +64,7 @@ class SignUpFirstBody extends StatelessWidget {
           children: [
             Text(
               'Email',
-              style: ts18Black700,
+              style: ts18Purble700,
             ),
             SizedBox(height: 17.h),
             const CustomTextField(

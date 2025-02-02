@@ -9,14 +9,17 @@ class CustomTextField extends StatelessWidget {
      this.icon,
     this.keyboardType,
     this.isSuffixExist,
+    this.controller,
   });
   final String? icon;
   final TextInputType? keyboardType;
   final bool? isSuffixExist;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
       keyboardType: keyboardType ?? TextInputType.text,
       style: textFieldTextStyle,
       decoration: InputDecoration(

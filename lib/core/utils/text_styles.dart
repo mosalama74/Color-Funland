@@ -14,6 +14,12 @@ TextStyle ts82Purple400 = TextStyle(
   fontSize: 82,
   fontWeight: FontWeight.w400,
 );
+TextStyle ts64Purple400 = TextStyle(
+  fontFamily: "Gloock",
+  color: cPurpleColor,
+  fontSize: 64,
+  fontWeight: FontWeight.w400,
+);
 
 TextStyle ts32Grey400 = TextStyle(
   fontFamily: "Lato",
@@ -21,8 +27,14 @@ TextStyle ts32Grey400 = TextStyle(
   fontSize: 32,
   fontWeight: FontWeight.w400,
 );
+TextStyle ts32Black400 = TextStyle(
+  fontFamily: "Gloock",
+  color: cBlackColor,
+  fontSize: 32,
+  fontWeight: FontWeight.w400,
+);
 
-TextStyle ts18Black700 = const TextStyle(
+TextStyle ts18Purble700 = const TextStyle(
   fontFamily: "Lato",
   color: Color(0xff2C005E),
   fontSize: 18,
@@ -52,7 +64,7 @@ TextStyle ts18Hint400 = TextStyle(
 
 TextStyle textFieldTextStyle = const TextStyle(
   fontSize: 18,
-  color:Color(0xff2C005E),
+  color: Color(0xff2C005E),
   fontWeight: FontWeight.w700,
   fontFamily: "Lato",
 );
