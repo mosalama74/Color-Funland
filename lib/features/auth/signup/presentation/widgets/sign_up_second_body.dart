@@ -1,6 +1,6 @@
 import 'package:color_funland/core/components/custom_text_field.dart';
 import 'package:color_funland/core/utils/text_styles.dart';
-import 'package:color_funland/features/auth/login/presentation/widgets/password_text_field.dart';
+import 'package:color_funland/core/components/password_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

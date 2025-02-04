@@ -1,4 +1,6 @@
 import 'package:color_funland/core/components/elevated_btn.dart';
+import 'package:color_funland/core/constants/app_common_padding.dart';
+import 'package:color_funland/core/constants/app_images.dart';
 import 'package:color_funland/core/utils/app_colors.dart';
 import 'package:color_funland/features/addProfileInfo/presentation/pages/addd_profile_info.dart';
 import 'package:color_funland/features/auth/signup/presentation/widgets/sign_up_first_body.dart';
@@ -23,6 +25,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   void initState() {
     super.initState();
     _isFirstPage = widget.isFirstPage;
+    
   }
 
   @override
@@ -30,7 +33,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/signup_bg.png"),
+          image: AssetImage("assets/images/gradient_bg.png"),
           fit: BoxFit.cover,
         ),
       ),
@@ -39,34 +42,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
         body: SafeArea(
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 34, bottom: 3, right: 310.91, left: 280),
+              padding: AppCommonPadding.screenOuterPadding,
               child: SingleChildScrollView(
                 child: Card(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
+
+                    borderRadius: BorderRadius.circular(40.r),
                   ),
                   color: cWhiteColor,
                   elevation: 5,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 78, vertical: 30),
+                    padding:  EdgeInsets.symmetric(
+                        horizontal: 61.w, vertical: 15.62.h),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // Logo
                         SvgPicture.asset(
-                          "assets/images/Logo.svg",
+                         AppImages.logo,
                           height: 128.h,
                         ),
-                        const SizedBox(height: 20),
+                         SizedBox(height: 20.h),
 
                         _isFirstPage ? const SignUpFirstBody() : const SignUpSecondBody(),
-                        const SizedBox(height: 20),
+                         SizedBox(height: 41.h),
                         // Next Button
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 90),
+                          padding:  EdgeInsets.symmetric(horizontal: 90.w),
                           child: ElevatedBtn(
                             text: "Next",
                             onPressed: () {

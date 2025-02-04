@@ -52,13 +52,13 @@ class _ToggleButtonsScreenState extends State<ToggleButtonsScreen> {
               ),
               child: SizedBox(
                 height: 48.h,
-                width: 60.w,
+                width: 222.w,
                 child: Center(
                   child: Text(
                     "Sign Up",
                     style: TextStyle(
                       color: isLoginSelected ? cBlack2Color : cWhite2Color,
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
@@ -66,7 +66,7 @@ class _ToggleButtonsScreenState extends State<ToggleButtonsScreen> {
               ),
             ),
           ),
-          const SizedBox(width: 20), // Space between buttons
+           SizedBox(width: 12.w), // Space between buttons
 
           ElevatedButton(
             onPressed: () => _toggleSelection(true),
@@ -89,13 +89,13 @@ class _ToggleButtonsScreenState extends State<ToggleButtonsScreen> {
               ),
               child: SizedBox(
                 height: 48.h,
-                width: 60.w,
+                width: 222.w,
                 child: Center(
                   child: Text(
                     "Log in",
                     style: TextStyle(
                       color: isLoginSelected ? cWhite2Color : cBlack2Color,
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),

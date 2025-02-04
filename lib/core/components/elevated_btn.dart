@@ -8,42 +8,51 @@ class ElevatedBtn extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.width,
-    });
-
+    this.isDelete,
+  });
 
   final String text;
   final double? width;
+  final bool? isDelete;
   final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        backgroundColor:  Colors.transparent, 
-        padding: EdgeInsets.zero,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0.r)),
-      ),
-      child: Ink(
-        decoration: BoxDecoration(
-          image:  const DecorationImage(
-                  image: AssetImage("assets/images/Button.png"),
-                  fit: BoxFit.cover,
-                ),
-             
-          borderRadius: BorderRadius.circular(10.0.r),
+    return SizedBox(
+      width: width ?? double.infinity,
+      height: 48.h,
+      // Default width if none provided
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          padding: EdgeInsets.zero,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0.r),
+          ),
         ),
-        child: SizedBox(
-          height: 48.h,
-          width: width ?? 60.w,
-          child: Center(
-            child: Text(
-              text,
-              style: TextStyle(
-                color:  cWhite2Color ,
-                fontSize: 17,
-                fontWeight: FontWeight.w700,
+        child: Ink(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(isDelete == null || isDelete == false
+                  ? "assets/images/Button.png"
+                  : "assets/images/deleteBtn.png"),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(10.0.r),
+          ),
+          child: FractionallySizedBox(
+            widthFactor: 1.0,
+            heightFactor: 1.0,
+            child: Container(
+              alignment: Alignment.center,
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: cWhite2Color,
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ),

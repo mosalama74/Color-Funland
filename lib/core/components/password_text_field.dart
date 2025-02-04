@@ -1,4 +1,5 @@
 import 'package:color_funland/core/utils/app_colors.dart';
+import 'package:color_funland/core/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,9 +24,12 @@ class _PasswordFieldState extends State<PasswordField> {
   Widget build(BuildContext context) {
     return TextField(
       controller: _passwordController,
+      keyboardType: TextInputType.visiblePassword,
       obscureText: _isPasswordHidden,
+      maxLines: 1,
       decoration: InputDecoration(
         hintText: 'Type here',
+        hintStyle: ts18Hint400,
         filled: true,
         fillColor: cTextFieldbg,
         border: OutlineInputBorder(

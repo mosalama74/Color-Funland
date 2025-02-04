@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-class UploadSelectCard extends StatelessWidget {
-  const UploadSelectCard({
+class UploadCameraField extends StatelessWidget {
+  const UploadCameraField({
     super.key,
     required this.icon,
     required this.text,
@@ -22,16 +22,17 @@ class UploadSelectCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 23, vertical: 12),
+          padding:  EdgeInsets.symmetric(horizontal: 23.w, vertical: 12.h),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               SvgPicture.asset(
                 icon,
-                width: 32,
-                height: 32,
+                width: 32.w,
+                height: 32.h,
+
               ),
-              SizedBox(width: 4.w),
+              SizedBox(width: 8.w),
               Text(
                 text,
                 style: const TextStyle(
