@@ -1,0 +1,54 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.userType == 'admin';
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      // Anyone can read basic user profiles
+      allow read: if isAuthenticated();
+      
+      // Users can only create their own profile
+      allow create: if isOwner(userId) && 
+        incomingData().userType in ['default', 'admin'] &&
+        incomingData().email is string &&
+        incomingData().firstName is string &&
+        incomingData().lastName is string &&
+        incomingData().username is string;
+      
+      // Users can update their own profile, admins can update any profile
+      allow update: if isOwner(userId) || isAdmin();
+      
+      // Only admins can delete profiles
+      allow delete: if isAdmin();
+      
+      // Helper function to validate incoming data
+      function incomingData() {
+        return request.resource.data;
+      }
+    }
+    
+    // Example of additional collections with rules
+    match /userSettings/{userId} {
+      allow read, write: if isOwner(userId);
+    }
+    
+    match /publicData/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+  }
+}

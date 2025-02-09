@@ -11,26 +11,31 @@ class CustomTextField extends StatelessWidget {
     this.isSuffixExist,
     this.controller,
     this.maxLength,
-    this.width,
+    this.width, 
+    this.validator,
+    this.textInputAction,
   });
   final String? icon;
   final int? maxLength;
-
+  final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final bool? isSuffixExist;
   final TextEditingController? controller;
   final double? width;
+  final TextInputAction? textInputAction;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? double.infinity,
-      child: TextField(
+      child: TextFormField(
         controller: controller,
         keyboardType: keyboardType ?? TextInputType.text,
         style: textFieldTextStyle,
+        textInputAction: textInputAction,
         maxLines: 1,
         maxLength: maxLength,
+        validator: validator,
         decoration: InputDecoration(
           hintText: 'Type here', // Add this to hide the character counter
           counterText: "",
@@ -49,6 +54,7 @@ class CustomTextField extends StatelessWidget {
                 )
               : null,
         ),
+        
       ),
     );
   }

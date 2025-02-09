@@ -9,11 +9,14 @@ class ElevatedBtn extends StatelessWidget {
     required this.onPressed,
     this.width,
     this.isDelete,
+    this.child,
   });
+
 
   final String text;
   final double? width;
   final bool? isDelete;
+  final Widget? child;
   final void Function() onPressed;
 
   @override
@@ -21,7 +24,7 @@ class ElevatedBtn extends StatelessWidget {
     return SizedBox(
       width: width ?? double.infinity,
       height: 48.h,
-      // Default width if none provided
+     
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -46,7 +49,7 @@ class ElevatedBtn extends StatelessWidget {
             heightFactor: 1.0,
             child: Container(
               alignment: Alignment.center,
-              child: Text(
+              child: child ?? Text(
                 text,
                 style: TextStyle(
                   color: cWhite2Color,

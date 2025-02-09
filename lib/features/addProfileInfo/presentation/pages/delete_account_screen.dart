@@ -1,14 +1,13 @@
 import 'package:color_funland/core/components/custom_text_field.dart';
 import 'package:color_funland/core/components/elevated_btn.dart';
-import 'package:color_funland/core/components/password_text_field.dart';
 import 'package:color_funland/core/constants/app_common_padding.dart';
+import 'package:color_funland/core/constants/app_images.dart';
 import 'package:color_funland/core/constants/app_strings.dart';
 import 'package:color_funland/core/utils/app_colors.dart';
 import 'package:color_funland/core/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 class DeleteAccountScreen extends StatelessWidget {
   const DeleteAccountScreen({
@@ -41,10 +40,7 @@ class DeleteAccountScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         // Logo
-                        SvgPicture.asset(
-                          "assets/images/Logo.svg",
-                          height: 128.h,
-                        ),
+                        logoImage,
                         SizedBox(height: 42.h),
                         Text(
                           AppStrings.deleteAccount,
@@ -55,23 +51,16 @@ class DeleteAccountScreen extends StatelessWidget {
                           AppStrings.deleteAccountText,
                           style: ts16Grey700,
                         ),
-                        SizedBox(height: 42.h),
+                        SizedBox(height: 32.h),
 
                         Text(
                           AppStrings.confirmDelete,
-                          style: ts16Grey700,
+                          style: ts18Purble700,
                         ),
                         SizedBox(height: 17.h),
                         const CustomTextField(),
                         SizedBox(height: 32.h),
 
-                        Text(
-                          AppStrings.retypePassword,
-                          style: ts18Purble700,
-                        ),
-                        SizedBox(height: 17.h),
-                        const PasswordField(),
-                        SizedBox(height: 32.h),
 
                         Row(
                           children: [

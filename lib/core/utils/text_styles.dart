@@ -1,3 +1,4 @@
+import 'package:color_funland/core/constants/app_strings.dart';
 import 'package:color_funland/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -59,7 +60,7 @@ TextStyle ts48Black400 = TextStyle(
 TextStyle ts18Black400 = TextStyle(
   fontSize: 18.sp,
   color: cBlackColor,
-  fontFamily: "Gloock",
+  fontFamily: AppStrings.secondaryFontFamily,
   fontWeight: FontWeight.w400,
 );
 
@@ -67,21 +68,21 @@ TextStyle ts18Hint400 = TextStyle(
   fontSize: 18.sp,
   color: cHintColor,
   fontWeight: FontWeight.w400,
-  fontFamily: "Lato",
+  fontFamily: AppStrings.primaryFontFamily,
 );
 
 TextStyle textFieldTextStyle =  TextStyle(
   fontSize: 18.sp,
-  color: Color(0xff2C005E),
+  color: const Color(0xff2C005E),
   fontWeight: FontWeight.w700,
-  fontFamily: "Lato",
+  fontFamily: AppStrings.primaryFontFamily,
 );
 
 TextStyle ts16Grey700 =  TextStyle(
   fontSize: 16.sp,
   color: const Color(0xff64636F),
   fontWeight: FontWeight.w700,
-  fontFamily: "Lato",
+  fontFamily: AppStrings.primaryFontFamily,
 );
 TextStyle ts16Purple700 =  TextStyle(
   fontSize: 16.sp,
@@ -93,5 +94,5 @@ TextStyle ts17Black700 = TextStyle(
   fontSize: 16.sp,
   color: cBlack2Color,
   fontWeight: FontWeight.w700,
-  fontFamily: "Lato",
+  fontFamily: AppStrings.primaryFontFamily,
 );

@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mosalama.color_funland">
     <application
         android:label="color_funland"
         android:name="${applicationName}"

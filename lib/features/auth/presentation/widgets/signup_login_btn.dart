@@ -1,6 +1,4 @@
 import 'package:color_funland/core/utils/app_colors.dart';
-import 'package:color_funland/features/auth/login/presentation/pages/login_page.dart';
-import 'package:color_funland/features/auth/signup/presentation/pages/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,11 +15,7 @@ class _ToggleButtonsScreenState extends State<ToggleButtonsScreen> {
   void _toggleSelection(bool isFirst) {
     setState(() {
       isLoginSelected = isFirst;
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  isLoginSelected ? const LoginScreen() : const SignUpScreen(isFirstPage: true,)));
+      Navigator.pushNamed(context, isFirst ? "/login" : "/signup");
     });
   }
 

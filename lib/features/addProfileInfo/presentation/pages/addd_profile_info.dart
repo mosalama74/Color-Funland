@@ -1,12 +1,11 @@
 import 'package:color_funland/core/components/elevated_btn.dart';
 import 'package:color_funland/core/constants/app_common_padding.dart';
+import 'package:color_funland/core/constants/app_images.dart';
 import 'package:color_funland/core/utils/text_styles.dart';
 import 'package:color_funland/features/addProfileInfo/presentation/widgets/add_photo_widget.dart';
 import 'package:color_funland/features/addProfileInfo/presentation/widgets/input_child_info_widget.dart';
-import 'package:color_funland/features/auth/login/presentation/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 class AddProfileInfo extends StatefulWidget {
   const AddProfileInfo({
@@ -54,10 +53,7 @@ class _AddProfileInfoState extends State<AddProfileInfo> {
                         // Logo
                         Padding(
                           padding: EdgeInsets.only(left: 10.w,top: 10.h),
-                          child: SvgPicture.asset(
-                            "assets/images/Logo.svg",
-                              height: 128.h,
-                          ),
+                          child: logoImage,
                         ),
                         SizedBox(height: 10.h),
                     
@@ -96,11 +92,7 @@ class _AddProfileInfoState extends State<AddProfileInfo> {
                                       _isFirstPage = false;
                                     })
                                   : setState(() {
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  const LoginScreen()));
+                                      Navigator.pushReplacementNamed(context, "/home");
                                     });
                             },
                           ),

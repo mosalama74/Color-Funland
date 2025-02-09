@@ -1,10 +1,9 @@
 import 'package:color_funland/core/constants/app_images.dart';
 import 'package:color_funland/core/utils/text_styles.dart';
-import 'package:color_funland/features/auth/login/presentation/widgets/signup_login_btn.dart';
+import 'package:color_funland/features/auth/presentation/widgets/signup_login_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});
@@ -38,9 +37,7 @@ class LandingPage extends StatelessWidget {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(left: 72.w, top: 7.h),
-                          child: SvgPicture.asset(
-                            AppImages.logo,
-                          ),
+                          child:logoImage,
 
                         ),
                         Padding(

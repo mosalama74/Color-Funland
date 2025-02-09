@@ -1,10 +1,22 @@
 class AppStrings {
+
+  static const String appName ="Color FunLand";
+  static const String primaryFontFamily = "Lato";
+  static const String secondaryFontFamily = "Gloock";
+
 /* Login Screen */
   static const String login = "Login";
   static const String username = "Username";
   static const String password = "Password";
-  static const String notHaveAccount = "Don\'t have account";
+  static const String notHaveAccount = "Don't have account";
   static const String signUp = "Sign Up";
+
+  /* Sign Up Screen */
+  static const String parentInfo = "Parent Information";
+  static const String firstName= "First name";
+  static const String lastName= "Last name";
+  static const String email= "Email";
+  
 /* Delete Account Screen */
   static const String deleteAccount = "Delete Account";
 
@@ -23,4 +35,8 @@ class AppStrings {
   static const String forgetPassword = "Forget Password?";
   static const String send = "Send";
   static const String enterEmailOrPhone = "Enter the registered email or phone number and we'll send you instructions to forget your password.";
+
+  /* change password screen */
+    static const String next = "Next";
+
 }

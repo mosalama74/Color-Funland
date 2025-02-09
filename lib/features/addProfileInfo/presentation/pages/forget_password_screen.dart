@@ -6,7 +6,6 @@ import 'package:color_funland/core/constants/app_strings.dart';
 import 'package:color_funland/core/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({
@@ -46,10 +45,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                       children: [
 
                         // Logo
-                        SvgPicture.asset(
-                         AppImages.logo,
-                          height: 128.h,
-                        ),
+                       logoImage,
                         SizedBox(height: 42.h),
                         Text(
                           AppStrings.forgetPassword,
